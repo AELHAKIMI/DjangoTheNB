@@ -1,0 +1,20 @@
+<?<DOCTYPE html>
+<html>
+    <head>
+        <title> Patients List </title>
+
+    </head>
+    <body>
+        {%if all_patients %}
+            <ul>
+                {% for Patient in all_patients %}
+                <li><a href="{{Patient.patientID}}/"> {{ Patient.patientName }} </a> </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <h3>list Patient Empty </h3>
+        {% endif %}
+
+    </body>
+
+</html>
