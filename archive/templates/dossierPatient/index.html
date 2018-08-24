@@ -1,0 +1,17 @@
+<?<DOCTYPE html>
+    <html>
+        <head>
+            <title> List </title>    
+        </head>
+        <body>
+            {%if all_Dossier%}
+                <ul>
+                    {% for dossier in all_Dossier %}
+                    <li><a href="{{dossier.DossierID}}/"> {{ dossier.patiantID }} </a> </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <h3>list Patient Empty </h3>
+            {% endif %}    
+        </body>    
+    </html>
