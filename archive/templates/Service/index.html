@@ -1,0 +1,17 @@
+<?<DOCTYPE html>
+    <html>
+        <head>
+            <title> Services </title>    
+        </head>
+        <body>
+            {%if all_Services%}
+                <ul>
+                    {% for Service in all_Services %}
+                    <li><a href="{{Service.id}}/"> {{ Service.serviceID }} </a> </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <h3>list Services Empty </h3>
+            {% endif %}    
+        </body>    
+    </html>
